@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             version="2.4"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+
+
+    <context-param>
+        <description>Location to store uploaded file</description>
+        <param-name>file-upload</param-name>
+        <param-value>
+            E:\Tomcat\apache-tomcat-7.0.63\webapps\data\
+        </param-value>
+    </context-param>
+
+    <filter>
+        <filter-name>LogFilter</filter-name>
+        <filter-class>LogFilter</filter-class>
+        <init-param>
+            <param-name>test-param</param-name>
+            <param-value>Initialization Paramter</param-value>
+        </init-param>
+    </filter>
+    <filter-mapping>
+        <filter-name>LogFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>SiteHitCounter</filter-name>
+        <filter-class>SiteHitCounter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>SiteHitCounter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <servlet>
+        <servlet-name>HelloWorld</servlet-name>
+        <servlet-class>HelloWorld</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HelloWorld</servlet-name>
+        <url-pattern>/HelloWorld</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>HelloForm</servlet-name>
+        <servlet-class>HelloForm</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HelloForm</servlet-name>
+        <url-pattern>/HelloForm</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CheckBox</servlet-name>
+        <servlet-class>CheckBox</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CheckBox</servlet-name>
+        <url-pattern>/CheckBox</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DisplayHeader</servlet-name>
+        <servlet-class>DisplayHeader</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DisplayHeader</servlet-name>
+        <url-pattern>/DisplayHeader</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Refresh</servlet-name>
+        <servlet-class>Refresh</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Refresh</servlet-name>
+        <url-pattern>/Refresh</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ReadCookies</servlet-name>
+        <servlet-class>ReadCookies</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ReadCookies</servlet-name>
+        <url-pattern>/ReadCookies</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DeleteCookies</servlet-name>
+        <servlet-class>DeleteCookies</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DeleteCookies</servlet-name>
+        <url-pattern>/DeleteCookies</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SessionTrack</servlet-name>
+        <servlet-class>SessionTrack</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SessionTrack</servlet-name>
+        <url-pattern>/SessionTrack</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DatabaseAccess</servlet-name>
+        <servlet-class>DatabaseAccess</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DatabaseAccess</servlet-name>
+        <url-pattern>/DatabaseAccess</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UploadServlet</servlet-name>
+        <servlet-class>UploadServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UploadServlet</servlet-name>
+        <url-pattern>/UploadServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CurrentDate</servlet-name>
+        <servlet-class>CurrentDate</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CurrentDate</servlet-name>
+        <url-pattern>/CurrentDate</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>PageRedirect</servlet-name>
+        <servlet-class>PageRedirect</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PageRedirect</servlet-name>
+        <url-pattern>/PageRedirect</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>PageHitCounter</servlet-name>
+        <servlet-class>PageHitCounter</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PageHitCounter</servlet-name>
+        <url-pattern>/PageHitCounter</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SendEmail</servlet-name>
+        <servlet-class>SendEmail</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SendEmail</servlet-name>
+        <url-pattern>/SendEmail</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ContextLog</servlet-name>
+        <servlet-class>ContextLog</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ContextLog</servlet-name>
+        <url-pattern>/ContextLog</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>GetLocale</servlet-name>
+        <servlet-class>GetLocale</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GetLocale</servlet-name>
+        <url-pattern>/GetLocale</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DisplaySpanish</servlet-name>
+        <servlet-class>DisplaySpanish</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DisplaySpanish</servlet-name>
+        <url-pattern>/DisplaySpanish</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DateLocale</servlet-name>
+        <servlet-class>DateLocale</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>DateLocale</servlet-name>
+        <url-pattern>/DateLocale</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>CurrencyLocale</servlet-name>
+        <servlet-class>CurrencyLocale</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CurrencyLocale</servlet-name>
+        <url-pattern>/CurrencyLocale</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>PercentageLocale</servlet-name>
+        <servlet-class>PercentageLocale</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PercentageLocale</servlet-name>
+        <url-pattern>/PercentageLocale</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>MyServlet</servlet-name>
+        <servlet-class>com.vimemacs.MyServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MyServlet</servlet-name>
+        <url-pattern>/MyServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ShowError</servlet-name>
+        <servlet-class>ShowError</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ShowError</servlet-name>
+        <url-pattern>/ShowError</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ErrorHandler</servlet-name>
+        <servlet-class>ErrorHandler</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ErrorHandler</servlet-name>
+        <url-pattern>/ErrorHandler</url-pattern>
+    </servlet-mapping>
+
+    <error-page>
+        <error-code>404</error-code>
+        <location>/ErrorHandler</location>
+    </error-page>
+    <error-page>
+        <exception-type>java.lang.Throwable</exception-type>
+        <location>/ErrorHandler</location>
+    </error-page>
+</web-app>
